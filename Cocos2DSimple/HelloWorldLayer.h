@@ -15,7 +15,15 @@
 // HelloWorldLayer
 @interface HelloWorldLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
 {
+    NSMutableArray *_targets;
+    NSMutableArray *_projectiles;
+    int _projectilesDestroyed;
 }
+
+- (void) pauseGame;
+
+@property (nonatomic,assign) NSMutableArray *_targets;
+@property (nonatomic,assign) NSMutableArray *_projectiles;
 
 // returns a CCScene that contains the HelloWorldLayer as the only child
 +(CCScene *) scene;
